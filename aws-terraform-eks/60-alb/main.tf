@@ -10,7 +10,7 @@ module "ingress_alb" {
   enable_deletion_protection = false
   tags = merge(
     var.common_tags,
-    var.web_alb_tags
+    var.ingress_alb_tags
   )
 }
 
