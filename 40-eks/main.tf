@@ -1,7 +1,8 @@
-# resource "aws_key_pair" "eks" {
-#     key_name = "eks"
-    
-# }
+#  resource "aws_key_pair" "eks" {
+#    key_name = "eks"
+#    public_key = file("~/.ssh/aws-eks.pub")
+#    # ~ means windows home directory
+#  }
 
 
 
@@ -45,7 +46,7 @@ module "eks" {
       AmazonElasticFileSystemFullAccess = "arn:aws:iam::aws:policy/service-role/AmazonEFSCSIDriverPolicy"
       ElasticLoadBalancingFullAccess = "arn:aws:iam::aws:policy/ElasticLoadBalancingFullAccess"
     }
-    #key_name = aws_key_pair.eks.key_name
+    # key_name = aws_key_pair.eks.key_name
    }
   }
     # green = {
