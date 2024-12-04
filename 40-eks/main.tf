@@ -3,9 +3,6 @@
    public_key = file("~/.ssh/aws-eks.pub")
    # ~ means windows home directory
  }
-
-
-
 module "eks" {
   source  = "terraform-aws-modules/eks/aws"
   version = "~> 20.0"
